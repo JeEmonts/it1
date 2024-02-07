@@ -1,6 +1,6 @@
-FROM jupyterhub/jupyyterhub:latest
-RUN pip install --no-cash  \
-    oauthenicator\
+FROM jupyterhub/jupyterhub:latest
+RUN pip install --no-cache  \
+    oauthenticator\
     dockerspawner \
     jupyterhub-nativeauthenticator
 
