@@ -1,7 +1,8 @@
 from dockerspawner import DockerSpawner
 from nativeauthenticator import NativeAuthenticator
 
-c.JupyterHub.authenticator_class = NativeAuthenticator
+#c.JupyterHub.authenticator_class = NativeAuthenticator
+c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
 c.JupyterHub.log_level = "DEBUG"
 c.JupyterHub.hub_ip = "0.0.0.0"
 c.JupyterHub.spawner_class = DockerSpawner
@@ -14,11 +15,12 @@ c.DockerSpawner.notebook_dir = "/home/jovyan/work"
 c.DockerSpawner.image = "jupyter/datascience-notebook:latest"
 c.DockerSpawner.http_timeout = 600
 
-c.GenericAuthenticator.enable_auth_state = True
-c.GenericAuthenticator.allowed_user = set()
-c.GenericAuthenticator.admin_users = {"myadmin"}
-c.NativeAuthenticator.open_signup = True
-c.NativeAuthenticator.create_system_users = True
+
+#c.GenericAuthenticator.enable_auth_state = True
+#c.GenericAuthenticator.allowed_user = set()
+#c.GenericAuthenticator.admin_users = {"myadmin"}
+#c.NativeAuthenticator.open_signup = True
+#c.NativeAuthenticator.create_system_users = True
 
 # Configuration file for jupupyterhub.
 
